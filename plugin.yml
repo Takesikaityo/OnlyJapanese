@@ -1,0 +1,6 @@
+name: OnlyJapanese
+main: takesi\japanese
+version: 1.0
+api: [3.0.0]
+load: POSTWORLD
+author: takesi
