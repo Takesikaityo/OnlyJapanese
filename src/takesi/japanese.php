@@ -36,7 +36,7 @@ class japanese extends PluginBase implements Listener {
 	 */
 	private function checkLocation(string $ip): array {
 		$ip_array = explode(".", $ip);
-		if ($ip === "127.0.0.1" || $ip_array[0] . $ip_array[1] === "192.168") {
+		if ($ip === "127.0.0.1" || ($ip_array[0] === "192" && $ip_array[1] === "168")) {
 			return [true, "ローカルネットワークからのログインです"];
 		} else {
 			$data = json_decode(Utils::getURL("http://freegeoip.net/json/" . $ip), true);
